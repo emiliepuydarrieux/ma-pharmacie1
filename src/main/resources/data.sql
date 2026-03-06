@@ -1,4 +1,4 @@
-MERGE INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) KEY(CODE) VALUES
+INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES 
 (11, 'Antalgiques et Antipyrétiques', 'Médicaments contre la douleur et la fièvre'),
 (12, 'Anti-inflammatoires', 'Médicaments réduisant l inflammation'),
 (3, 'Antibiotiques', 'Médicaments pour traiter les infections bactériennes'),
@@ -8,7 +8,8 @@ MERGE INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) KEY(CODE) VALUES
 (7, 'Vitamines et Compléments', 'Suppléments nutritionnels'),
 (8, 'Médicaments Cardiovasculaires', 'Médicaments pour le cœur et la circulation'),
 (9, 'Médicaments Gastro-intestinaux', 'Médicaments pour les troubles digestifs'),
-(10, 'Médicaments Respiratoires', 'Médicaments pour les troubles respiratoires');
+(10, 'Médicaments Respiratoires', 'Médicaments pour les troubles respiratoires')
+ON CONFLICT (CODE) DO NOTHING;
 ALTER TABLE Categorie ALTER COLUMN code RESTART WITH 13;
 
 -- Catégorie 1: Antalgiques et Antipyrétiques
