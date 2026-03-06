@@ -1,15 +1,6 @@
-INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES 
-(11, 'Antalgiques et Antipyrétiques', 'Médicaments contre la douleur et la fièvre'),
-(12, 'Anti-inflammatoires', 'Médicaments réduisant l inflammation'),
-(3, 'Antibiotiques', 'Médicaments pour traiter les infections bactériennes'),
-(4, 'Antihypertenseurs', 'Médicaments pour traiter l''hypertension artérielle'),
-(5, 'Antidiabétiques', 'Médicaments pour traiter le diabète'),
-(6, 'Antihistaminiques', 'Médicaments pour traiter les allergies'),
-(7, 'Vitamines et Compléments', 'Suppléments nutritionnels'),
-(8, 'Médicaments Cardiovasculaires', 'Médicaments pour le cœur et la circulation'),
-(9, 'Médicaments Gastro-intestinaux', 'Médicaments pour les troubles digestifs'),
-(10, 'Médicaments Respiratoires', 'Médicaments pour les troubles respiratoires')
-ON CONFLICT (CODE) DO NOTHING;
+INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES (11, 'Antalgiques', 'Douleur') ON CONFLICT DO NOTHING;
+INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES (12, 'Anti-inflammatoires', 'Inflammation') ON CONFLICT DO NOTHING;
+INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES (3, 'Antibiotiques', 'Infections') ON CONFLICT DO NOTHING;
 ALTER TABLE Categorie ALTER COLUMN code RESTART WITH 13;
 
 -- Catégorie 1: Antalgiques et Antipyrétiques
