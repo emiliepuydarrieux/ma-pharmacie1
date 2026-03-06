@@ -1,5 +1,4 @@
-
-INSERT INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) VALUES
+MERGE INTO CATEGORIE (CODE, LIBELLE, DESCRIPTION) KEY(CODE) VALUES
 (11, 'Antalgiques et Antipyrétiques', 'Médicaments contre la douleur et la fièvre'),
 (12, 'Anti-inflammatoires', 'Médicaments réduisant l inflammation'),
 (3, 'Antibiotiques', 'Médicaments pour traiter les infections bactériennes'),
